@@ -9,7 +9,5 @@ module Spree
                       path: ':rails_root/public/spree/options/:id/:style/:basename.:extension',
                       default_url: '/assets/default_options.png'
 
-    include Spree::Core::S3Support
-    supports_s3 :attachment
   end
 end
