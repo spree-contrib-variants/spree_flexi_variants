@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_flexi_variants'
-  s.version     = '2.1.1'
+  s.version     = '2.2.0'
   s.summary     = 'Allow users to choose product options with costs. Without having to create variants for each option combination.'
   s.required_ruby_version = '>= 1.9.3'
 
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('carrierwave')
   s.add_dependency('mini_magick')
-  s.add_dependency 'spree', '>= 2.1'
+  s.add_dependency 'spree', '>= 2.2'
 
   s.add_development_dependency 'capybara',           '~> 2.1'
   s.add_development_dependency 'coffee-rails'
