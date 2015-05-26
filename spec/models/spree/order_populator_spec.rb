@@ -32,7 +32,7 @@ describe Spree::OrderPopulator do
       ad_hoc_option_value_ids = nil
       product_customizations = nil
       order.contents.should_receive(:add).with(variant, 1, subject.currency, shipment, ad_hoc_option_value_ids, product_customizations).and_return double.as_null_object
-      valid = subject.populate(:products => { @product.to_param => variant.to_param }, :quantity => 1, ad_hoc_option_value_ids: ad_hoc_option_value_ids, product_customizations: product_customizations)
+      valid = subject.populate(variant, 1, ad_hoc_option_value_ids, product_customizations)
       # TODO enhance this test so that it tests what it is ought to
       # - create a real order
       # assert valid == false, 'invalid order populated'
