@@ -34,6 +34,14 @@ module Spree
           ad_hoc_option_value_ids.each do |cid|
             povs << AdHocOptionValue.find(cid)
           end
+
+          # if we dont save the line item here, ad hoc option values wont be saved
+          # I don't know why, but it turtles down to the following:
+          # spree-0b5f3d4738e7/core/app/models/spree/tax_rate.rb:173
+          # If we don't update tax adjustments then the ad hoc option values are save at the
+          # end of this function (row 56).
+          line_item.save
+
           line_item.ad_hoc_option_values = povs
 
           offset_price   = povs.map(&:price_modifier).compact.sum + product_customizations.map {|pc| pc.price(variant)}.sum
