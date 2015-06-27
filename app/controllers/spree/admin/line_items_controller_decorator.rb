@@ -1,5 +1,5 @@
 module Spree
-  Admin::LineItemsController.class_eval do
+  Api::LineItemsController.class_eval do
     include ProductCustomizations
     include AdHocUtils
 
