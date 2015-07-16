@@ -1,6 +1,8 @@
 SpreeFlexiVariants
 ==================
 
+[![Join the chat at https://gitter.im/spree-contrib-variants/spree_flexi_variants](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/spree-contrib-variants/spree_flexi_variants?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is a [spree](http://spreecommerce.com) extension that solves two use cases related to variants.  I call them **Ad Hoc Options** and **Product Customizations**.
 
 
